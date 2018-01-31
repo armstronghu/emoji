@@ -1,0 +1,149 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+@import 'weui.wxss';
+@import 'emojione-sprite-32.min.wxss';
+
+/**header wrapper**/
+.emoji_header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 2;
+}
+.emoji-content {
+  margin-top: 90px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+/**copy-area**/
+.copy-area-bar {
+  position: relative;
+  padding: unset;
+  box-sizing: border-box;
+  background-color: #efeff4;
+  border-top: 1rpx solid #d7d6dc;
+  border-bottom: 1rpx solid #d7d6dc;
+}
+
+.copy-area-bar__form {
+  position: relative; 
+  border-radius: unset;
+  background: #fff;
+  border: 1rpx solid #e6e6ea;
+}
+
+.copy-area-bar__box {
+     display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    margin: 0 auto;
+
+
+  position: relative;
+  width: 100%;
+}
+
+.copy-area-bar__input {
+  position: relative;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #efeff4;
+  margin:2px;
+  width: 100%;
+  padding-right: 30px;
+}
+
+
+/**nav bar**/
+.weui-navbar__title {
+  font-size: 12px;
+}
+.weui-tab__panel {
+  background:#fff;
+  padding-top: unset;
+  border-radius:5px;
+}
+.weui-tab{
+  background-color:#efeff4;
+}
+
+.weui-navbar {
+  background:#fff;
+  position: relative; 
+  box-shadow: 1px 4px 8px #888888;
+}
+
+/**emoji-tab**/
+.emoji-weui-tab {
+  padding:2px 10px 5px 10px;
+}
+
+.weui-tab__content {
+padding:10px;
+text-align: unset;
+display: -webkit-flex;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+} 
+
+.weui-tab__content:after {
+  content: "";
+  flex: auto;
+}
+
+
+/**eomji img**/
+.emoji {
+border: solid #efeff4;
+border-radius: 5px;
+margin: 1px;
+}
+ image:hover {
+  border: dotted red;
+  border-width: 1px;
+} 
+
+/**emoji_footer**/
+ .emoji_footer {
+  background: white;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+  font-size: 12px;
+}
+
+.footer-tips-clear{
+  padding:4px 8px;
+}

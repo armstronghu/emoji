@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/issue/issue"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FAF085",
+    "navigationBarTitleText": "emoji",
+    "navigationBarTextStyle":"black"
+  }
+}

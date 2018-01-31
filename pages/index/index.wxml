@@ -1,0 +1,58 @@
+<view class="page">
+
+     <view class="page__bd emoji_header">
+       <view class="copy-area-bar">
+            <view class="copy-area-bar__form">
+                <view class="copy-area-bar__box">
+                    <input fixed='true' type="text" class="copy-area-bar__input" placeholder='点击表情会自动复制' placeholder-style='text-align: center' auto-height='true' value="{{emojiValues}}"  bindinput='copyAreaTypeing' />
+                     <view class="weui-icon-clear" wx:if="{{emojiValues.length > 0}}"  bindtap="clearCopyArea">
+                        <icon type="clear" size="16"></icon>
+                    </view> 
+                </view>
+            </view>
+        </view> 
+      <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+              <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                  <view class="weui-navbar__title">{{item}}</view>
+              </view>
+          </block>
+      </view>
+    </view> 
+        
+     <scroll-view class="page__bd emoji-content">
+        <view class="weui-tab">
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.people}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.food}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.nature}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.travel}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
+                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.objects}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 5}}">
+                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.activity}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 6}}">
+                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.symbols}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 7}}">
+                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.flags}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                </view>
+            </view>
+        </view>
+    </scroll-view> 
+
+    <view class="page__bd emoji_footer" wx:if="{{tipsShow}}">
+    <navigator url="/pages/issue/issue" hover-class="navigator-hover">问题反馈</navigator>
+    <view class="weui-icon-clear footer-tips-clear"  bindtap="clearTips"><icon type="clear" size="12"></icon></view>
+    </view>
+</view>
