@@ -8,6 +8,7 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#FAF085",
     "navigationBarTitleText": "emoji",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
   }
 }

@@ -24,28 +24,28 @@
         <view class="weui-tab">
             <view class="weui-tab__panel">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.people}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                  <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.people}}" wx:for-item="emoji" class='emojione-32-people _{{emoji.base}} emoji'></image>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.food}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                  <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.food}}" wx:for-item="emoji" class='emojione-32-food _{{emoji.base}} emoji'></image>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.nature}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                  <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.nature}}" wx:for-item="emoji" class='emojione-32-nature _{{emoji.base}} emoji'></image>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
-                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.travel}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                  <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.travel}}" wx:for-item="emoji" class='emojione-32-travel _{{emoji.base}} emoji'></image>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
-                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.objects}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                  <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.objects}}" wx:for-item="emoji" class='emojione-32-objects _{{emoji.base}} emoji'></image>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 5}}">
-                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.activity}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                  <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.activity}}" wx:for-item="emoji" class='emojione-32-activity _{{emoji.base}} emoji'></image>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 6}}">
-                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.symbols}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                  <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.symbols}}" wx:for-item="emoji" class='emojione-32-symbols _{{emoji.base}} emoji'></image>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 7}}">
-                  <image bindtap="tabEmoji" data-point="{{emoji.code_points.output}}" wx:key='code_points.base' wx:for="{{emojis.flags}}" wx:for-item="emoji" class='emojione-32-{{emoji.category}} _{{emoji.code_points.base}} emoji'></image>
+                  <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.flags}}" wx:for-item="emoji" class='emojione-32-flags _{{emoji.base}} emoji'></image>
                 </view>
             </view>
         </view>

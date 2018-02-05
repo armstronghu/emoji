@@ -1,5 +1,5 @@
 import emojis from 'data';
-
+var all = getApp().globalData.all
 Page({
   data: {
     tabs: ["人物", "食物", "自然", "旅行", "物体", "活动", "符号","旗帜"],
@@ -12,7 +12,12 @@ Page({
   viewData:{
     emojiValues: ''
   },
-
+  taginput: function(e){
+    var b = e.currentTarget.dataset.base
+    var v = e.detail.value
+    console.log(b)
+    all[b].tags = v
+  },
   //emojis change event handle
   tabEmoji: function (e) {
     var p = e.currentTarget.dataset.point
@@ -62,8 +67,12 @@ Page({
   tabClick: function (e) {
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
-      activeIndex: e.currentTarget.id
+      activeIndex: e.currentTarget.id 
     });
+  },
+  onPullDownRefresh: function(){
+    console.log('up')
+    wx.stopPullDownRefresh()
   }
 });
 
