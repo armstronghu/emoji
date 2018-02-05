@@ -4,7 +4,7 @@
        <view class="copy-area-bar">
             <view class="copy-area-bar__form">
                 <view class="copy-area-bar__box">
-                    <input fixed='true' type="text" class="copy-area-bar__input" placeholder='点击表情会自动复制' placeholder-style='text-align: center' auto-height='true' value="{{emojiValues}}"  bindinput='copyAreaTypeing' />
+                    <textarea fixed='true' type="text" class="copy-area-bar__input" placeholder='点击表情会自动复制' placeholder-style='text-align: center' auto-height='true' value="{{emojiValues}}"  bindinput='copyAreaTypeing' />
                      <view class="weui-icon-clear" wx:if="{{emojiValues.length > 0}}"  bindtap="clearCopyArea">
                         <icon type="clear" size="16"></icon>
                     </view> 
