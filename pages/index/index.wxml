@@ -1,10 +1,9 @@
 <view class="page">
-
      <view class="page__bd emoji_header">
        <view class="copy-area-bar">
             <view class="copy-area-bar__form">
                 <view class="copy-area-bar__box">
-                    <textarea fixed='true' type="text" class="copy-area-bar__input" placeholder='点击表情会自动复制' placeholder-style='text-align: center' auto-height='true' value="{{emojiValues}}"  bindinput='copyAreaTypeing' />
+                    <textarea fixed='true' auto-height='{{autoHeight}}' style='height:{{height}}px' bindfocus='copyAreafocus' maxlength='-1' cursor='{{copyAreaCursor}}' type="text" class="copy-area-bar__input" placeholder='点击表情会自动复制' placeholder-style='text-align: center' bindlinechange='onlinechange' value="{{emojiValues}}"  bindinput='copyAreaTypeing' bindblur='copyAreablur'/>
                      <view class="weui-icon-clear" wx:if="{{emojiValues.length > 0}}"  bindtap="clearCopyArea">
                         <icon type="clear" size="16"></icon>
                     </view> 
@@ -20,36 +19,52 @@
       </view>
     </view> 
         
-     <scroll-view class="page__bd emoji-content">
+     <view class="page__bd emoji-content">
         <view class="weui-tab">
-            <view class="weui-tab__panel">
-                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <swiper class="weui-tab__panel1" current='{{currSwiper}}' indicator-dots="{{indicatorDots}}" bindchange='swiperChange' style='height:{{swiperH}}px' autoplay="{{autoplay}}"  duration="500">
+              <swiper-item id='people' >
+                <view class="weui-tab__content" >
                   <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.people}}" wx:for-item="emoji" class='emojione-32-people _{{emoji.base}} emoji'></image>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+              </swiper-item>
+              <swiper-item id='food' >
+                <view class="weui-tab__content" >
                   <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.food}}" wx:for-item="emoji" class='emojione-32-food _{{emoji.base}} emoji'></image>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+              </swiper-item>
+              <swiper-item id='nature' >
+                <view class="weui-tab__content">
                   <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.nature}}" wx:for-item="emoji" class='emojione-32-nature _{{emoji.base}} emoji'></image>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+              </swiper-item>
+              <swiper-item id='travel' >
+                <view class="weui-tab__content">
                   <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.travel}}" wx:for-item="emoji" class='emojione-32-travel _{{emoji.base}} emoji'></image>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
+              </swiper-item>
+              <swiper-item id='objects' >
+                <view class="weui-tab__content">
                   <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.objects}}" wx:for-item="emoji" class='emojione-32-objects _{{emoji.base}} emoji'></image>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 5}}">
+              </swiper-item>
+              <swiper-item id='activity' >
+                <view class="weui-tab__content">
                   <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.activity}}" wx:for-item="emoji" class='emojione-32-activity _{{emoji.base}} emoji'></image>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 6}}">
+              </swiper-item>
+              <swiper-item id='symbols' >
+                <view class="weui-tab__content">
                   <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.symbols}}" wx:for-item="emoji" class='emojione-32-symbols _{{emoji.base}} emoji'></image>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 7}}">
+              </swiper-item>
+              <swiper-item id='flags' >
+                <view class="weui-tab__content">
                   <image bindtap="tabEmoji" data-point="{{emoji.output}}" wx:key='code_points.base' wx:for="{{emojis.flags}}" wx:for-item="emoji" class='emojione-32-flags _{{emoji.base}} emoji'></image>
                 </view>
-            </view>
+              </swiper-item>
+            </swiper>
         </view>
-    </scroll-view> 
+    </view> 
 
     <view class="page__bd emoji_footer" wx:if="{{tipsShow}}">
     <navigator url="/pages/issue/issue" hover-class="navigator-hover">问题反馈</navigator>

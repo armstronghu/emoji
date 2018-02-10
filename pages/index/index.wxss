@@ -1,25 +1,3 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
-
 
 @import 'weui.wxss';
 @import 'emojione-sprite-32.min.wxss';
@@ -71,8 +49,7 @@
 
 .copy-area-bar__input {
   position: relative;
-  height: 28px;
-  line-height: 28px;
+  line-height: 24px;
   font-size: 14px;
   border-radius: 5px;
   background-color: #efeff4;
@@ -86,11 +63,17 @@
 .weui-navbar__title {
   font-size: 12px;
 }
-.weui-tab__panel {
+.weui-tab__panel1 {
   background:#fff;
-  padding-top: unset;
+  padding-top:28px;
   border-radius:5px;
 }
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
 .weui-tab{
   background-color:#efeff4;
 }
