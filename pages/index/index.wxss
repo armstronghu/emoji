@@ -130,3 +130,28 @@ margin: 1px;
 .footer-tips-clear{
   padding:4px 8px;
 }
+
+ .share {
+  background:floralwhite;
+  position: fixed;
+  bottom:150px;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+  font-size: 2px;
+  border-radius: 5px;
+} 
+
+.share-img{
+  border-radius: 5px;
+     height: 35px;
+     width: 80px;
+     align-content: center;
+}
+
+.share-btn{
+    background: transparent;
+    height: 35px;
+    width: 80px;
+    padding: 0px;
+}
